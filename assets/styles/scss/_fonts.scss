@@ -1,0 +1,62 @@
+$main_typho: 'League Spartan','Roboto';
+
+@mixin type-regular {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  }
+
+@mixin type-regular-variant {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.1px;
+}
+
+@mixin heading-l {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 33px;
+  letter-spacing: -1.125px;
+}
+
+@mixin heading-m {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 22px;
+  letter-spacing: -0.75px;
+}
+
+@mixin heading-s {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+
+@mixin heading-s-variant {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+}
+
+h1 {
+  @include heading-l;
+}
+
+h2 {
+  @include heading-m;
+}
+
+h3 {
+  @include heading-s;
+}
+
