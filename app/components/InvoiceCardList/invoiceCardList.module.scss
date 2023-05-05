@@ -1,0 +1,7 @@
+@import "@/assets/styles/scss/theme";
+
+.list {
+  @include flex-column;
+
+  gap: 16px;
+}

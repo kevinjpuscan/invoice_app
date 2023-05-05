@@ -1,6 +1,6 @@
 import styles from "./status.module.scss";
+import { type StatusType } from "@/core/domain/Invoice";
 
-type StatusType = "pending" | "paid" | "draft";
 export function Status({ status }: { status: StatusType }): JSX.Element {
   return (
     <div className={styles[status]}>

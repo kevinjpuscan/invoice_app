@@ -1,37 +1,24 @@
 import styles from "./invoiceCard.module.scss";
 import { Status } from "@design-system/Status/Status";
+import { type Invoice } from "@domain/Invoice";
 
-interface InvoiceCardProps {
-  code: string;
-  customer: string;
-  date: string;
-  price: string;
-  status: "pending" | "paid" | "draft";
-}
-export function InvoiceCard({
-  code,
-  customer,
-  date,
-  price,
-  status,
-}: InvoiceCardProps): JSX.Element {
+export function InvoiceCard({ invoice }: { invoice: Invoice }): JSX.Element {
   return (
     <div className={styles.card}>
       <div className={styles.identifier}>
         <div className={styles.code}>
-          {" "}
           <span className={styles.index}>#</span>
-          {code}
+          {invoice.id}
         </div>
-        <div className={styles.customer}>{customer}</div>
+        <div className={styles.customer}>{invoice.clientName}</div>
       </div>
       <div className={styles.information}>
         <div className={styles.details}>
-          <div className={styles.date}>{date}</div>
-          <div className={styles.price}>£ {price}</div>
+          <div className={styles.date}>{invoice.createdAt}</div>
+          <div className={styles.price}>£ 100.00</div>
         </div>
         <div className={styles.status}>
-          <Status status={status} />
+          <Status status={invoice.status} />
         </div>
       </div>
     </div>

@@ -15,7 +15,13 @@ export function Navbar(): JSX.Element {
       </div>
       <div className={styles["avatar-container"]}>
         <div className={styles.avatar}>
-          <Image src={avatar} width={32} height={32} alt="user avatar" />
+          <Image
+            src={avatar}
+            width={32}
+            height={32}
+            alt="user avatar"
+            priority={true}
+          />
         </div>
       </div>
     </nav>

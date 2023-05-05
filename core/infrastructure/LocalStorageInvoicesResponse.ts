@@ -1,4 +1,4 @@
-export interface Invoice {
+interface Invoice {
   id: string;
   createdAt: string;
   paymentDue: string;
@@ -6,25 +6,27 @@ export interface Invoice {
   paymentTerms: number;
   clientName: string;
   clientEmail: string;
-  status: StatusType;
+  status: string;
   senderAddress: SenderAddress;
   clientAddress: SenderAddress;
   items: Item[];
   total: number;
 }
 
-export interface Item {
+interface Item {
   name: string;
   quantity: number;
   price: number;
   total: number;
 }
 
-export interface SenderAddress {
+interface SenderAddress {
   street: string;
   city: string;
   postCode: string;
   country: string;
 }
 
-export type StatusType = "pending" | "paid" | "draft";
+export interface LocalStorageInvoicesResponse {
+  invoices: Invoice[];
+}
