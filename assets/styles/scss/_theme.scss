@@ -4,8 +4,6 @@
 
 $primary-color: $c1;
 $primary-color-light: $c2;
-$secondary-color: $c9;
-$secondary-color-light: $c10;
 $background-light-mode: $c11;
 $background-dark-mode: $c12;
 $background-card-light-mode: $white;
@@ -15,11 +13,44 @@ $background-section-dark-mode: $c4;
 $background-form-light-mode: $white;
 $background-form-dark-mode: $c12;
 
+
 // Default theme
 $background: $background-light-mode;
 $background-card: $background-card-light-mode;
 $background-section: $background-section-light-mode;
 $background-form: $background-form-light-mode;
+
+// btn-primary
+$button-primary-background: $primary-color;
+$button-primary-color: $white;
+$button-primary-hover-background: $primary-color-light;
+$button-primary-hover-color: $white;
+
+// btn-danger
+$button-danger-background: $red;
+$button-danger-color: $white;
+$button-danger-hover-background: $red-light;
+$button-danger-hover-color: $white;
+
+// btn-action-1
+$button-action-1-background: $c14;
+$button-action-1-color: $c7;
+$button-action-1-hover-background: $c15;
+$button-action-1-hover-color: $c7;
+
+// btn-action-2
+$button-action-2-background: $c13;
+$button-action-2-color: $c6;
+$button-action-2-hover-background: $c8;
+$button-action-2-hover-color: $c6;
+
+// btn-action-3
+$button-action-3-background: $c14;
+$button-action-3-color: $c7;
+$button-action-3-hover-background: $c5;
+$button-action-3-hover-color: $c7;
+
+
 
 // Theme dark mode
 @media (prefers-color-scheme: dark) {

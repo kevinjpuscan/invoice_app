@@ -1,0 +1,97 @@
+@import "@styles/theme";
+
+@mixin button {
+  @include type-bold;
+
+  padding: 18px 24px;
+  border-radius: 24px;
+  border: 0;
+  cursor: pointer;
+}
+
+@mixin primary {
+  @include button;
+
+  background-color: $button-primary-background;
+  color: $button-primary-color;
+
+  &:hover {
+    background-color: $button-primary-hover-background;
+    color: $button-primary-hover-color;
+  }
+}
+
+.plus {
+  @include primary;
+  @include flex-row;
+
+  padding: 8px 24px 8px 8px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+
+  .icon {
+    @include flex-center;
+
+    width: 32px;
+    height: 32px;
+    background: $white;
+    border-radius: 50%;
+
+    &:hover {
+      color: $button-primary-hover-color;
+    }
+  }
+}
+
+.primary {
+  @include primary;
+}
+
+.danger {
+  @include button;
+
+  background-color: $button-danger-background;
+  color: $button-danger-color;
+
+  &:hover {
+    background-color: $button-danger-hover-background;
+    color: $button-danger-hover-color;
+  }
+}
+
+.action-1 {
+  @include button;
+
+  background-color: $button-action-1-background;
+  color: $button-action-1-color;
+
+  &:hover {
+    background-color: $button-action-1-hover-background;
+    color: $button-action-1-hover-color;
+  }
+}
+
+.action-2 {
+  @include button;
+
+  background-color: $button-action-2-background;
+  color: $button-action-2-color;
+
+  &:hover {
+    background-color: $button-action-2-hover-background;
+    color: $button-action-2-hover-color;
+  }
+}
+
+.action-3 {
+  @include button;
+
+  background-color: $button-action-3-background;
+  color: $button-action-3-color;
+
+  &:hover {
+    background-color: $button-action-3-hover-background;
+    color: $button-action-3-hover-color;
+  }
+}

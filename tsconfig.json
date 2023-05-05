@@ -22,7 +22,9 @@
       "@domain/*": ["./core/domain/*"],
       "@infrastructure/*": ["./core/infrastructure/*"],
       "@application/*": ["./core/application/*"],
-      "@injection": ["./core/injection.ts"]
+      "@injection": ["./core/injection.ts"],
+      "@styles/*": ["./assets/styles/scss/*"],
+      "@icons/*": ["./assets/icons/*"]
     },
     "plugins": [
       {
