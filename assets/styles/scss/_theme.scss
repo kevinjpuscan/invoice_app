@@ -1,31 +1,27 @@
-@import './_reset.scss';
-@import './_fonts.scss';
-@import './_colors.scss';
+@import './reset';
+@import './fonts';
+@import './colors';
 
 $primary-color: $c1;
 $primary-color-light: $c2;
 $secondary-color: $c9;
 $secondary-color-light: $c10;
-
 $background-light-mode: $c11;
 $background-dark-mode: $c12;
-
 $background-card-light-mode: $white;
 $background-card-dark-mode: $c3;
-
 $background-section-light-mode: $c14;
 $background-section-dark-mode: $c4;
-
 $background-form-light-mode: $white;
 $background-form-dark-mode: $c12;
 
-//Default theme
+// Default theme
 $background: $background-light-mode;
 $background-card: $background-card-light-mode;
 $background-section: $background-section-light-mode;
 $background-form: $background-form-light-mode;
 
-//Theme dark mode
+// Theme dark mode
 @media (prefers-color-scheme: dark) {
   $background: $background-dark-mode;
   $background-card: $background-card-dark-mode;
@@ -35,6 +31,7 @@ $background-form: $background-form-light-mode;
 
 body {
   background-color: $background;
-  font-family: $main_typho;
+  font-family: $main-typho;
+
   @include type-regular;
 }

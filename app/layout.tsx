@@ -1,13 +1,13 @@
 import "@/assets/styles/scss/main.scss";
+import { League_Spartan } from "next/font/google";
 export const metadata = {
   title: "Notes Manager",
   description: "Your notes manager",
 };
-import { League_Spartan } from 'next/font/google'
 
 const leagueSpartan = League_Spartan({
-  subsets:['latin'],
-  weight:['500','700']
+  subsets: ["latin"],
+  weight: ["500", "700"],
 });
 export default function RootLayout({
   children,
@@ -16,17 +16,24 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-    <head>
-      <meta charSet="UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com"/>
-      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap" rel="stylesheet"></link>
-      <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon/favicon-32x32.png"/>
-      <title>Frontend Mentor | Invoice app</title>
-    </head>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="./assets/icon/favicon-32x32.png"
+        />
+        <title>Frontend Mentor | Invoice app</title>
+      </head>
       <body className={leagueSpartan.className}>{children}</body>
     </html>
   );
 }
-
