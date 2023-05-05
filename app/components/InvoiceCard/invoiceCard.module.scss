@@ -1,0 +1,63 @@
+@import "@/assets/styles/scss/theme";
+
+.card {
+  padding: 25px 24px 24px 28px;
+  background: $background-card;
+  box-shadow: 0 10px 10px -10px rgb(72 84 160 / 10%);
+  border-radius: 8px;
+  gap: 24px;
+
+  @include flex-column;
+
+  .identifier {
+    @include flex-row;
+
+    justify-content: space-between;
+    width: 100%;
+
+    .code {
+      @include heading-s-variant;
+
+      color: $c8;
+
+      .index {
+        color: $c7;
+      }
+    }
+
+    .customer {
+      color: #858bb2;
+
+      @include type-regular;
+    }
+  }
+
+  .information {
+    @include flex-row;
+
+    justify-content: space-between;
+    width: 100%;
+
+    .details {
+      @include flex-column;
+
+      gap: 9px;
+
+      .date {
+        @include type-regular;
+
+        color: $c6;
+      }
+
+      .price {
+        @include heading-s-variant;
+
+        color: $c8;
+      }
+    }
+
+    .status {
+      //  color: $color-primary;
+    }
+  }
+}

@@ -8,6 +8,14 @@ $main-typho: 'League Spartan','Roboto';
   letter-spacing: -0.1px;
   }
 
+@mixin type-bold {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+}
+
 @mixin type-regular-variant {
   font-style: normal;
   font-weight: 500;

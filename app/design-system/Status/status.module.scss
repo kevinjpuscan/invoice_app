@@ -1,0 +1,60 @@
+@import "@/assets/styles/scss/theme";
+
+@mixin status {
+  padding: 11px 30px;
+  border-radius: 6px;
+}
+
+.text-container {
+  @include flex-row;
+
+  gap: 8px;
+
+  .text {
+    @include type-bold;
+
+    text-transform: capitalize;
+  }
+
+  .circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.paid {
+  @include status;
+
+  background: rgba($color: $green, $alpha: 6%);
+  color: $green;
+
+  .circle {
+    background: $green;
+  }
+}
+
+.pending {
+  @include status;
+
+  background-color: rgba($color: $orange, $alpha: 6%);
+  color: $orange;
+
+  .circle {
+    background: $orange;
+  }
+}
+
+.draft {
+  @include status;
+
+  background-color: rgba($color: $c13, $alpha: 6%);
+  color: $c13;
+
+  .circle {
+    background: $c13;
+  }
+}
