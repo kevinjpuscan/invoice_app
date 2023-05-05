@@ -48,15 +48,4 @@ $main-typho: 'League Spartan','Roboto';
   letter-spacing: -0.25px;
 }
 
-h1 {
-  @include heading-l;
-}
-
-h2 {
-  @include heading-m;
-}
-
-h3 {
-  @include heading-s;
-}
 

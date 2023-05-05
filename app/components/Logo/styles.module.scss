@@ -1,0 +1,26 @@
+@import "@/assets/styles/scss/theme";
+
+$size: 72px;
+
+.base {
+  background-color: $c1;
+  position: relative;
+  width: $size;
+  height: $size;
+  border-radius: 0 25% 25% 0;
+
+  @include flex-center;
+
+  .shadow {
+    background-color: $c2;
+    width: $size;
+    height: calc($size / 2);
+    border-radius: calc($size / 4) 0;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .logo {
+    z-index: 1;
+  }
+}

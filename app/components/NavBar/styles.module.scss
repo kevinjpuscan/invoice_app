@@ -1,0 +1,39 @@
+@import "@/assets/styles/scss/theme";
+
+$size: 72px;
+
+.navbar {
+  height: $size;
+  background-color: $c13;
+
+  @include flex-row;
+
+  justify-content: space-between;
+
+  .brand-container {
+    @include flex-row;
+
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 1px solid #494e6e;
+
+    .dark-mode {
+      padding: 21px;
+    }
+  }
+
+  .avatar-container {
+    @include flex-center;
+
+    height: $size;
+    min-width: $size;
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}

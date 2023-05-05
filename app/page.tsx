@@ -8,6 +8,7 @@ export default function App(): JSX.Element {
         repudiandae quisquam minus nisi ab est omnis nemo quidem magni ipsa
         beatae, ratione ipsum! Nisi dicta quas vel deleniti est sequi!
       </p>
+      <div className="navbar">asdasd</div>
     </div>
   );
 }

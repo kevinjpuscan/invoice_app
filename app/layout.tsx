@@ -1,5 +1,7 @@
 import "@/assets/styles/scss/main.scss";
 import { League_Spartan } from "next/font/google";
+
+import { Navbar } from "./components/NavBar/Navbar";
 export const metadata = {
   title: "Notes Manager",
   description: "Your notes manager",
@@ -22,10 +24,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
           rel="icon"
           type="image/png"
           sizes="32x32"
@@ -33,7 +31,12 @@ export default function RootLayout({
         />
         <title>Frontend Mentor | Invoice app</title>
       </head>
-      <body className={leagueSpartan.className}>{children}</body>
+      <body className={leagueSpartan.className}>
+        <header>
+          <Navbar />
+        </header>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,6 +1,6 @@
-@import './reset';
 @import './fonts';
 @import './colors';
+@import './flex';
 
 $primary-color: $c1;
 $primary-color-light: $c2;
@@ -29,9 +29,3 @@ $background-form: $background-form-light-mode;
   $background-form: $background-form-dark-mode;
 }
 
-body {
-  background-color: $background;
-  font-family: $main-typho;
-
-  @include type-regular;
-}
