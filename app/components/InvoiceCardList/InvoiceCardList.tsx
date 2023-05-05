@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import styles from "./invoiceCardList.module.scss";
+import styles from "./InvoiceCardList.module.scss";
 import { InvoiceCard } from "@components/InvoiceCard/InvoiceCard";
 import { invoiceFinder } from "@injection";
 import { type Invoice } from "@/core/domain/Invoice";

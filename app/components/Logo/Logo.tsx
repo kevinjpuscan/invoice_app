@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from "@/assets/images/logo.svg";
-import styles from "./styles.module.scss";
+import styles from "./Logo.module.scss";
 
 export function Logo(): JSX.Element {
   return (

@@ -1,4 +1,4 @@
-import styles from "./status.module.scss";
+import styles from "./Status.module.scss";
 import { type StatusType } from "@/core/domain/Invoice";
 
 export function Status({ status }: { status: StatusType }): JSX.Element {

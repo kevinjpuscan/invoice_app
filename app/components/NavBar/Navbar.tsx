@@ -1,6 +1,6 @@
 import Image from "next/image";
 import iconMoon from "@/assets/icons/icon-moon.svg";
-import styles from "./styles.module.scss";
+import styles from "./Navbar.module.scss";
 import avatar from "@/assets/images/image-avatar.jpg";
 import { Logo } from "@components/Logo/Logo";
 

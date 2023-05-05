@@ -1,4 +1,4 @@
-import styles from "./invoiceCard.module.scss";
+import styles from "./InvoiceCard.module.scss";
 import { Status } from "@design-system/Status/Status";
 import { type Invoice } from "@domain/Invoice";
 
