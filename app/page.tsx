@@ -2,28 +2,24 @@
 
 import { InvoiceCardList } from "./components/InvoiceCardList/InvoiceCardList";
 import { Button } from "@design-system/Button/Button";
-import { CheckBox } from "./design-system/CheckBox/CheckBox";
+import { CheckBoxList } from "./design-system/CheckBoxList/CheckBoxList";
 import { useState } from "react";
+import { type CheckBoxListItem } from "./design-system/CheckBoxList/CheckBoxList.types";
 export default function App(): JSX.Element {
-  const [check, setCheck] = useState(true);
-  const [check2, setCheck2] = useState(true);
+  const [list, setList] = useState<CheckBoxListItem[]>([
+    { label: "Item 1", value: "item-1", checked: false },
+    { label: "Item 2", value: "item-2", checked: false },
+    { label: "Item 3", value: "item-3", checked: false },
+  ]);
+
   return (
     <>
       <div style={{ padding: "1rem" }}>
-        <CheckBox
-          checked={check}
-          label="Check me"
+        <CheckBoxList
+          items={list}
           onChange={(value) => {
-            setCheck(value);
             console.log(value);
-          }}
-        />
-        <CheckBox
-          checked={check2}
-          label="Check me"
-          onChange={(value) => {
-            setCheck2(value);
-            console.log(value);
+            setList(value);
           }}
         />
         <Button type="plus">New</Button>

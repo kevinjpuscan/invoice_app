@@ -1,0 +1,7 @@
+@import "@styles/theme";
+
+.list {
+  @include flex-column;
+
+  gap: 10px;
+}
