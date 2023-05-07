@@ -1,0 +1,25 @@
+@import "@styles/theme";
+
+.input {
+  margin-right: 13px;
+}
+
+.label {
+  @include type-bold;
+
+  color: $c8;
+}
+
+.input::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: $c5;
+  border: 1px solid $c1;
+  border-radius: 2px;
+  float: left;
+}
+
+.input:checked::before {
+  background: $c1;
+}
