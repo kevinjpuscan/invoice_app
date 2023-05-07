@@ -1,24 +1,19 @@
 import { useId } from "react";
 import styles from "./CheckBox.module.scss";
-
-type OnChangeFunction = (value: boolean) => void;
+import { type CheckBoxProps } from "./CheckBox.types";
 
 export function CheckBox({
   onChange,
-  value,
+  checked,
   label,
-}: {
-  onChange: OnChangeFunction;
-  value: boolean;
-  label: string;
-}): JSX.Element {
+}: CheckBoxProps): JSX.Element {
   const checkBoxId = useId();
 
   return (
     <>
       <input
         className={styles.input}
-        checked={value}
+        checked={checked}
         onChange={(event) => {
           onChange(event.target.checked);
         }}
