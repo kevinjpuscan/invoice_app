@@ -17,6 +17,7 @@
     "paths": {
       "@/*": ["./*"],
       "@components/*": ["./app/components/*"],
+      "@contexts/*": ["./app/contexts/*"],
       "@pages/*": ["./app/pages/*"],
       "@design-system/*": ["./app/design-system/*"],
       "@domain/*": ["./core/domain/*"],
@@ -39,7 +40,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "tests/**/*.ts",
-    "*.config.js"
+    "*.config.js",
+    "app/components/HeaderInvoices"
   ],
   "exclude": ["node_modules"]
 }

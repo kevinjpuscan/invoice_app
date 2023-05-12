@@ -1,20 +1,34 @@
-import { type CheckBoxListItem } from "@design-system/CheckBoxList/CheckBoxList.types";
 import styles from "./StatusSelect.module.scss";
 import { useState } from "react";
 import { CheckBoxList } from "@design-system/CheckBoxList/CheckBoxList";
 import IconArrow from "assets/icons/icon-arrow-down.svg";
 import Image from "next/image";
+import { type CheckBoxListItem } from "@/app/design-system/CheckBoxList/CheckBoxList.types";
+import { type StatusType } from "@/core/domain/Invoice";
 
-export function StatusSelect(): JSX.Element {
+interface StatusSelectProps {
+  setFilters: (filters: StatusType[]) => void;
+}
+
+export function StatusSelect({ setFilters }: StatusSelectProps): JSX.Element {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [list, setList] = useState<CheckBoxListItem[]>([
-    { label: "Item 1", value: "item-1", checked: false },
-    { label: "Item 2", value: "item-2", checked: false },
-    { label: "Item 3", value: "item-3", checked: false },
-  ]);
-
   const toggleVisibility = (): void => {
     setIsVisible(!isVisible);
+  };
+
+  const [options, setOptions] = useState<CheckBoxListItem[]>([
+    { label: "Draft", value: "draft", checked: false },
+    { label: "Pending", value: "pending", checked: false },
+    { label: "Paid", value: "paid", checked: false },
+  ]);
+
+  const handleChange = (options: CheckBoxListItem[]): void => {
+    setOptions(options);
+    setFilters(
+      options
+        .filter((option) => option.checked)
+        .map((option) => option.value as StatusType)
+    );
   };
 
   return (
@@ -30,7 +44,7 @@ export function StatusSelect(): JSX.Element {
       <div
         className={`${styles.options} ${isVisible ? styles["is-visible"] : ""}`}
       >
-        <CheckBoxList items={list} onChange={setList} />
+        <CheckBoxList items={options} onChange={handleChange} />
       </div>
     </div>
   );

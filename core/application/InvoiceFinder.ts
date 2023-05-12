@@ -1,4 +1,4 @@
-import { type Invoice } from "../domain/Invoice";
+import { type StatusType, type Invoice } from "../domain/Invoice";
 import { type InvoiceRepository } from "../domain/InvoiceRepository";
 
 export class InvoiceFinder {
@@ -9,5 +9,11 @@ export class InvoiceFinder {
 
   find: () => Promise<Invoice[]> = async () => {
     return await this.invoiceRepository.find();
+  };
+
+  findByStatus: (statusTypes: StatusType[]) => Promise<Invoice[]> = async (
+    statusTypes
+  ) => {
+    return await this.invoiceRepository.findByStatus(statusTypes);
   };
 }
