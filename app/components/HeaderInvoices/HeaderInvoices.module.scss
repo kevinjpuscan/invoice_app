@@ -1,0 +1,27 @@
+@import "@styles/theme";
+
+.header {
+  @include flex-row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  .title-container {
+    .title {
+      color: $c8;
+    }
+
+    .subtitle {
+      @include type-regular-variant;
+
+      color: $c6;
+    }
+  }
+
+  .actions {
+    @include flex-row;
+
+    align-items: center;
+    gap: 18px;
+  }
+}

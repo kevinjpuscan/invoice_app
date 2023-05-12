@@ -1,9 +1,10 @@
 @import "@/assets/styles/scss/theme";
 
 .card {
+  @include elevation;
+
   padding: 25px 24px 24px 28px;
   background: $background-card;
-  box-shadow: 0 10px 10px -10px rgb(72 84 160 / 10%);
   border-radius: 8px;
   gap: 24px;
 
