@@ -27,4 +27,8 @@ export interface SenderAddress {
   country: string;
 }
 
-export type StatusType = "pending" | "paid" | "draft";
+export enum StatusType {
+  PENDING = "pending",
+  PAID = "paid",
+  DRAFT = "draft",
+}

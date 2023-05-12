@@ -4,7 +4,7 @@ import { CheckBoxList } from "@design-system/CheckBoxList/CheckBoxList";
 import IconArrow from "assets/icons/icon-arrow-down.svg";
 import Image from "next/image";
 import { type CheckBoxListItem } from "@/app/design-system/CheckBoxList/CheckBoxList.types";
-import { type StatusType } from "@/core/domain/Invoice";
+import { StatusType } from "@/core/domain/Invoice";
 
 interface StatusSelectProps {
   setFilters: (filters: StatusType[]) => void;
@@ -17,9 +17,9 @@ export function StatusSelect({ setFilters }: StatusSelectProps): JSX.Element {
   };
 
   const [options, setOptions] = useState<CheckBoxListItem[]>([
-    { label: "Draft", value: "draft", checked: false },
-    { label: "Pending", value: "pending", checked: false },
-    { label: "Paid", value: "paid", checked: false },
+    { label: "Draft", value: StatusType.DRAFT, checked: false },
+    { label: "Pending", value: StatusType.PENDING, checked: false },
+    { label: "Paid", value: StatusType.PAID, checked: false },
   ]);
 
   const handleChange = (options: CheckBoxListItem[]): void => {
