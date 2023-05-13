@@ -2,7 +2,7 @@ import Image from "next/image";
 import iconMoon from "@/assets/icons/icon-moon.svg";
 import styles from "./Navbar.module.scss";
 import avatar from "@/assets/images/image-avatar.jpg";
-import { Logo } from "@components/Logo/Logo";
+import { Logo } from "@/src/components/Logo/Logo";
 
 export function Navbar(): JSX.Element {
   return (

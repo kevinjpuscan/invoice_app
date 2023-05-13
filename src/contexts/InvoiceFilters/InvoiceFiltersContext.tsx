@@ -1,4 +1,4 @@
-import { type StatusType } from "@/core/domain/Invoice";
+import { type StatusType } from "@domain/Invoice";
 import { createContext, useState } from "react";
 
 export const InvoiceFiltersContext = createContext<{

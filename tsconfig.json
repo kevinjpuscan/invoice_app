@@ -16,14 +16,13 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"],
-      "@components/*": ["./app/components/*"],
-      "@contexts/*": ["./app/contexts/*"],
-      "@pages/*": ["./app/pages/*"],
-      "@design-system/*": ["./app/design-system/*"],
-      "@domain/*": ["./core/domain/*"],
-      "@infrastructure/*": ["./core/infrastructure/*"],
-      "@application/*": ["./core/application/*"],
-      "@injection": ["./core/injection.ts"],
+      "@components/*": ["./src/components/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@design-system/*": ["./src/design-system/*"],
+      "@domain/*": ["./src/core/domain/*"],
+      "@infrastructure/*": ["./src/core/infrastructure/*"],
+      "@application/*": ["./src/core/application/*"],
+      "@injection": ["./src/core/injection.ts"],
       "@styles/*": ["./assets/styles/scss/*"],
       "@icons/*": ["./assets/icons/*"]
     },
@@ -41,7 +40,7 @@
     ".next/types/**/*.ts",
     "tests/**/*.ts",
     "*.config.js",
-    "app/components/HeaderInvoices"
+    "src/components/HeaderInvoices"
   ],
   "exclude": ["node_modules"]
 }

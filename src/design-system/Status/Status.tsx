@@ -1,5 +1,5 @@
 import styles from "./Status.module.scss";
-import { type StatusType } from "@/core/domain/Invoice";
+import { type StatusType } from "@domain/Invoice";
 
 export function Status({ status }: { status: StatusType }): JSX.Element {
   return (

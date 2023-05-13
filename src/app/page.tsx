@@ -1,8 +1,8 @@
 "use client";
 
-import { InvoiceCardList } from "./components/InvoiceCardList/InvoiceCardList";
-import { HeaderInvoices } from "./components/HeaderInvoices/HeaderInvoices";
-import { InvoiceFiltersProvider } from "./contexts/InvoiceFilters/InvoiceFiltersContext";
+import { InvoiceCardList } from "@components/InvoiceCardList/InvoiceCardList";
+import { HeaderInvoices } from "@components/HeaderInvoices/HeaderInvoices";
+import { InvoiceFiltersProvider } from "@contexts/InvoiceFilters/InvoiceFiltersContext";
 export default function App(): JSX.Element {
   return (
     <>

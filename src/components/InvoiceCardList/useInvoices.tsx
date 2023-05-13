@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
-import { type Invoice } from "@/core/domain/Invoice";
-import { InvoiceFiltersContext } from "@/app/contexts/InvoiceFilters/InvoiceFiltersContext";
-import { type InvoiceFinder } from "@/core/application/InvoiceFinder";
+import { type Invoice } from "@domain/Invoice";
+import { InvoiceFiltersContext } from "@contexts/InvoiceFilters/InvoiceFiltersContext";
+import { type InvoiceFinder } from "@application/InvoiceFinder";
 
 export const useInvoices = (invoiceFinder: InvoiceFinder): Invoice[] => {
   const { filters } = useContext(InvoiceFiltersContext);

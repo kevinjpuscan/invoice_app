@@ -1,10 +1,10 @@
 import styles from "./StatusSelect.module.scss";
 import { useState } from "react";
-import { CheckBoxList } from "@design-system/CheckBoxList/CheckBoxList";
+import { CheckBoxList } from "@/src/design-system/CheckBoxList/CheckBoxList";
 import IconArrow from "assets/icons/icon-arrow-down.svg";
 import Image from "next/image";
-import { type CheckBoxListItem } from "@/app/design-system/CheckBoxList/CheckBoxList.types";
-import { StatusType } from "@/core/domain/Invoice";
+import { type CheckBoxListItem } from "@design-system/CheckBoxList/CheckBoxList.types";
+import { StatusType } from "@domain/Invoice";
 
 interface StatusSelectProps {
   setFilters: (filters: StatusType[]) => void;

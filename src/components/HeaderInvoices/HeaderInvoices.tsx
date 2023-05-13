@@ -3,7 +3,7 @@ import { StatusSelect } from "@components/StatusSelect/StatusSelect";
 import styles from "./HeaderInvoices.module.scss";
 import { InvoiceFiltersContext } from "@contexts/InvoiceFilters/InvoiceFiltersContext";
 import { useContext } from "react";
-import { type StatusType } from "@/core/domain/Invoice";
+import { type StatusType } from "@domain/Invoice";
 
 export function HeaderInvoices(): JSX.Element {
   const { setFilters }: { setFilters: (filters: StatusType[]) => void } =

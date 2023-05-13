@@ -1,7 +1,7 @@
 import "@/assets/styles/scss/main.scss";
 import { League_Spartan } from "next/font/google";
 
-import { Navbar } from "./components/NavBar/Navbar";
+import { Navbar } from "@components/NavBar/Navbar";
 export const metadata = {
   title: "Notes Manager",
   description: "Your notes manager",
